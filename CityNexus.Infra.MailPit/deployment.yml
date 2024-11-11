@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citynexus-infra-mailpit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: citynexus-infra-mailpit
+  template:
+    metadata:
+      labels:
+        app: citynexus-infra-mailpit
+    spec:
+      containers:
+        - name: citynexus-infra-mailpit
+          image: axllent/mailpit
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "300m"
+          ports:
+            - containerPort: 8025
+            - containerPort: 1025
+
+ 
+

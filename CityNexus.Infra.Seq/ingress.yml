@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: citynexus-infra-seq
+  annotations:
+    kubernetes.io/ingressClassName: nginx
+spec:
+  rules:
+    - host: seq.citynexus.io
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: citynexus-infra-seq
+                port:
+                  number: 80
+

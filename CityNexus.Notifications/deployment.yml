@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citynexus-notfications
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: citynexus-notfications
+  template:
+    metadata:
+      labels:
+        app: citynexus-notfications
+    spec:
+      containers:
+        - name: citynexus-notfications
+          image: ismael3s/citynexus.notifications:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
