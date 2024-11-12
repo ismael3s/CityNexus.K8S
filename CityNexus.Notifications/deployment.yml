@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: citynexus-notfications
-          image: ismael3s/citynexus.notifications:d15914e
+          image: ismael3s/citynexus.notifications:1f43602
           resources:
             limits:
               memory: "128Mi"
