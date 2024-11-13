@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: CityNexus.People
-          image: ismael3s/citynexus.people:05ce1e7
+          image: ismael3s/citynexus.people:099ef1a
           resources:
             limits:
               memory: "128Mi"
